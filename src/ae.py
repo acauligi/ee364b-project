@@ -65,10 +65,11 @@ class Encoder(nn.Module):
  
         # Flatten output and compress
         # x = x.view(x.shape[0], -1)
-        for ii in range(0,len(self.ff_layers)):
+        for ii in range(0,len(self.ff_layers)-1):
             x = self.ff_layers[ii](x)
             if self.ff_activation:
                 x = self.ff_activation(x)
+        x = self.ff_layers[-1](x)
         return x
 
 

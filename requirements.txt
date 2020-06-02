@@ -12,6 +12,7 @@ dill==0.3.1.1
 ecos==2.0.7.post1
 entrypoints==0.3
 future==0.18.2
+h5py==2.10.0
 idna==2.9
 importlib-metadata==1.6.0
 ipykernel==5.3.0
@@ -30,6 +31,7 @@ MarkupSafe==1.1.1
 matplotlib==3.2.1
 mistune==0.8.4
 multiprocess==0.70.9
+Mosek==9.2.9
 nbconvert==5.6.1
 nbformat==5.0.6
 notebook==6.0.3
