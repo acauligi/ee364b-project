@@ -36,7 +36,7 @@ class Encoder(nn.Module):
 
         for ii in range(0, len(ff_shape) - 1):
           ff_layers.append(torch.nn.Linear(ff_shape[ii], ff_shape[ii+1]))
-        ff_layers.append(torch.nn.Linear(ff_shape[ii], dim_z))
+        ff_layers.append(torch.nn.Linear(ff_shape[-1], dim_z))
 
         self.dim_in = dim_in
         self.dim_out = dim_z 
@@ -75,7 +75,7 @@ class Encoder(nn.Module):
 
 def get_cartpole_encoder(dim_in, dim_z): 
     channels_enc = []
-    ff_shape = [dim_in, 32, 32]
+    ff_shape = [dim_in, 128,128]
 
     conv_activation = None
     ff_activation = torch.nn.ReLU()
